@@ -33,7 +33,7 @@ alterar o valor da propriedade `idade` dessa pessoa, somando `1` a cada vez que
 for chamado.
 */
 pessoa.fazerAniversario = function () {
-  pessoa.idade++;
+  this.idade++;
 };
 /*
 Adicione um método ao objeto `pessoa` chamado `andar`, que terá as seguintes
@@ -47,8 +47,8 @@ booleano que representa "verdadeiro";
 */
 
 pessoa.andar = function (m) {
-  pessoa.caminhouQuantosMetros = pessoa.caminhouQuantosMetros + m;
-  pessoa.andando = true;
+  this.caminhouQuantosMetros += m;
+  this.andando = true;
 };
 
 /*
@@ -56,7 +56,7 @@ Adicione um método ao objeto `pessoa` chamado `parar`, que irá modificar o val
 da propriedade `andando` para o valor booleano que representa "falso".
 */
 pessoa.parar = function () {
-  pessoa.andando = false;
+  this.andando = false;
 };
 
 /*
@@ -177,9 +177,9 @@ método), que será concatenada com a frase de retorno, mostrando a resposta
 correta, de acordo com os dados inseridos no objeto.
 */
 pessoa.apresentacao = function () {
-  let artigo = pessoa.sexo === "feminino" ? "a" : "o";
-  let anos = pessoa.idade === 1 ? "ano" : "anos";
-  let metros = pessoa.caminhouQuantosMetros === 1 ? "metro" : "metros";
+  let artigo = this.sexo === "feminino" ? "a" : "o";
+  let anos = this.idade === 1 ? "ano" : "anos";
+  let metros = this.caminhouQuantosMetros === 1 ? "metro" : "metros";
   return `Olá, eu sou ${artigo} ${this.nome} ${this.sobrenome}, tenho ${this.idade} ${anos}, minha altura é ${this.altura}, meu peso é ${this.peso} e, só hoje, eu já caminhei ${this.caminhouQuantosMetros} ${metros}!`;
 };
 
