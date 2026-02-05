@@ -9,6 +9,7 @@ let testes = [
     { "func": calcular(10), "esperado": 10 },
     { "func": calcular(10, 5), "esperado": 15 },
     { "func": calcular(10, 10, 2), "esperado": 10 },
+    { "func": calcular(undefined, 10), "esperado": null },
 ]
 
 let count = 1;
