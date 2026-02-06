@@ -50,35 +50,56 @@ seguintes propriedades (os valores devem ser do tipo mostrado abaixo):
 - `assentos` - Number - cinco por padrão
 - `quantidadePessoas` - Number - zero por padrão
 */
-?
+let carro = {
+    marca: 'fiat',
+    modelo: 'palio',
+    placa: 'hah1166',
+    ano: 2016,
+    cor: 'vermelho',
+    quantasPortas: 4,
+    assentos: 5,
+    quantidadePessoas: 0
+    };
 
 /*
 Crie um método chamado `mudarCor` que mude a cor do carro conforme a cor
 passado por parâmetro.
 */
-?
+carro.mudarCor = function (cor) {
+    this.cor = cor;
+};
 
 /*
 Crie um método chamado `obterCor`, que retorne a cor do carro.
 */
-?
+carro.obterCor = function () {
+    return this.cor;
+};
 
 /*
 Crie um método chamado `obterModelo` que retorne o modelo do carro.
 */
-?
+carro.obterModelo = function () {
+    return this.modelo;
+};
 
 /*
 Crie um método chamado `obterMarca` que retorne a marca do carro.
 */
-?
+carro.obterMarca = function () {
+    return this.marca;
+};
 
 /*
 Crie um método chamado `obterMarcaModelo`, que retorne:
 "Esse carro é um [MARCA] [MODELO]"
 Para retornar os valores de marca e modelo, utilize os métodos criados.
 */
-?
+carro.obterMarcaModelo = function () {
+    return `Esse carro é um ${this.marca} ${this.modelo}`
+};
+
+console.log(carro.obterMarcaModelo())
 
 /*
 Crie um método que irá adicionar pessoas no carro. Esse método terá as
@@ -96,7 +117,11 @@ mostrar quantos assentos ainda podem ser ocupados, com a frase:
 - Se couber somente mais uma pessoa, mostrar a palavra "pessoa" no retorno
 citado acima, no lugar de "pessoas".
 */
-?
+carro.adicionaPessoas = function (pessoas) {
+    return `Já temos ${this.quantidadePessoas} pessoas no carro!`
+};
+
+console.log(carro.adicionaPessoas());
 
 /*
 Agora vamos verificar algumas informações do carro. Para as respostas abaixo,
