@@ -136,16 +136,19 @@ carro.adicionaPessoas = function (pessoas) {
 };
 
 carro.removePessoas = function (pessoas) {
-  let palavraAtual = this.quantidadePessoas === 1 ? "pessoa" : "pessoas";
-  if (this.quantidadePessoas > 0 && pessoas <= this.quantidadePessoas) {
-    this.quantidadePessoas -= pessoas;
-    let palavraAtual = this.quantidadePessoas === 1 ? "pessoa" : "pessoas";
-    return `Já temos ${this.quantidadePessoas} ${palavraAtual} no carro!`;
+  if (pessoas <= 0) {
+    return `O número de pessoas precisa ser maior que 0!`;
   }
-  return `Não é possivel tirar ${pessoas} ${palavraAtual} do carro, pois só tem ${this.quantidadePessoas} ${palavraAtual}.`;
-};
 
-console.log(carro.removePessoas(2));
+  if (pessoas > this.quantidadePessoas) {
+    const pluralPessoas = this.quantidadePessoas === 1 ? "pessoa" : "pessoas";
+    return `Só temos ${this.quantidadePessoas} ${pluralPessoas} no carro!`;
+  }
+
+  this.quantidadePessoas -= pessoas;
+  const pluralFinal = this.quantidadePessoas === 1 ? "pessoa" : "pessoas";
+  return `Agora temos ${this.quantidadePessoas} ${pluralFinal} no carro!`;
+};
 
 /*
 Agora vamos verificar algumas informações do carro. Para as respostas abaixo,
