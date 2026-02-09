@@ -10,15 +10,15 @@ Crie uma função que receba um array como parâmetro, e retorne esse array.
 */
 // 
 function sampleFunction(arr) {
-    return arr
-}
+    return arr;
+};
 
 /*
 Imprima o segundo índice do array retornado pela função criada acima.
 */
 // 
-console.log(sampleFunction(sampleValues)[1])
-
+console.log(sampleFunction(sampleValues)[1]);
+console.log(sampleValues[0]);
 /*
 Crie uma função que receba dois parâmetros: o primeiro, um array de valores; e o
 segundo, um número. A função deve retornar o valor de um índice do array que foi passado
@@ -26,7 +26,20 @@ no primeiro parâmetro. O índice usado para retornar o valor, deve ser o númer
 segundo parâmetro.
 */
 // 
+function randomFunction(arr, number) {
+    if (!Array.isArray(arr)) {
+        return 'The argument needs to be an Array!';
+    }
 
+    if (number < 0 || number >= arr.length || !Number.isInteger(number)) {
+        return 'Error: the index does not exist.'
+    }
+    
+    return arr[number];
+};
+
+console.log(randomFunction([1, 2, 3], 0));
+console.log(randomFunction([1, 2, 3], 3.14));
 
 /*
 Declare uma variável que recebe um array com 5 valores, de tipos diferentes.
