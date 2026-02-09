@@ -17,8 +17,8 @@ function sampleFunction(arr) {
 Imprima o segundo índice do array retornado pela função criada acima.
 */
 // 
-console.log(sampleFunction(sampleValues)[1]);
-console.log(sampleValues[0]);
+// console.log(sampleFunction(sampleValues)[1]);
+// console.log(sampleValues[0]);
 /*
 Crie uma função que receba dois parâmetros: o primeiro, um array de valores; e o
 segundo, um número. A função deve retornar o valor de um índice do array que foi passado
@@ -38,20 +38,23 @@ function randomFunction(arr, number) {
     return arr[number];
 };
 
-console.log(randomFunction([1, 2, 3], 0));
-console.log(randomFunction([1, 2, 3], 3.14));
+// TESTES
+// console.log(randomFunction([1, 2, 3], 0));
+// console.log(randomFunction([1, 2, 3], 3.14));
 
 /*
 Declare uma variável que recebe um array com 5 valores, de tipos diferentes.
 */
-// ?
+//
+
+let randomVar = [2, 'hello', false, 2.5, null]
 
 /*
 Invoque a função criada acima, fazendo-a retornar todos os valores do último
 array criado.
 */
 // ?
-
+// console.log(sampleFunction(randomVar));
 /*
 Crie uma função chamada `book`, que recebe um parâmetro, que será o nome do
 livro. Dentro dessa função, declare uma variável que recebe um objeto com as
@@ -66,12 +69,44 @@ propriedades:
 - Se o parâmetro não for passado, a função deve retornar o objeto com todos
 os livros.
 */
-// ?
+// 
+function book(bookName) {
+    const bookTitle = {
+        ulysses : {
+            quantidadePaginas: 300,
+            autor: 'James Joyce',
+            editora: 'Arqueiro'
+        },
+
+        verity: {
+           quantidadePaginas: 350,
+           autor: 'Coleen Hoover',
+           editora: 'Record'
+        },
+
+        domCasmurro: {
+            quantidadePaginas: 208,
+            autor: 'Machado de Assis',
+            editora: 'Principis'
+        }
+    };
+    
+    if (!bookName) {
+        return bookTitle;
+    };
+
+    return bookTitle[bookName];
+
+}
+
+console.log(book('domCasmurro'));
+
 
 /*
 Usando a função criada acima, imprima o objeto com todos os livros.
 */
-// ?
+// 
+console.log(book());
 
 /*
 Ainda com a função acima, imprima a quantidade de páginas de um livro qualquer,
@@ -79,7 +114,8 @@ usando a frase:
 "O livro [NOME_DO_LIVRO] tem [X] páginas!"
 */
 // ?
-
+const livro = 'ulysses';
+console.log(`O livro ${livro} tem ${book('ulysses').quantidadePaginas} páginas!`);
 /*
 Ainda com a função acima, imprima o nome do autor de um livro qualquer, usando
 a frase:
