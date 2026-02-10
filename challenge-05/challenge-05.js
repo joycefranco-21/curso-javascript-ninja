@@ -2,13 +2,11 @@
 Crie uma variável qualquer, que receba um array com alguns valores aleatórios
 - ao menos 5 - (fica por sua conta os valores do array).
 */
-// 
 let sampleValues = [ 2, 'test', true, 2.5, 'joyce' ]
 
 /*
 Crie uma função que receba um array como parâmetro, e retorne esse array.
 */
-// 
 function sampleFunction(arr) {
     return arr;
 };
@@ -16,16 +14,15 @@ function sampleFunction(arr) {
 /*
 Imprima o segundo índice do array retornado pela função criada acima.
 */
-// 
-// console.log(sampleFunction(sampleValues)[1]);
-// console.log(sampleValues[0]);
+console.log(sampleFunction(sampleValues)[1]);
+console.log(sampleValues[0]);
 /*
 Crie uma função que receba dois parâmetros: o primeiro, um array de valores; e o
 segundo, um número. A função deve retornar o valor de um índice do array que foi passado
 no primeiro parâmetro. O índice usado para retornar o valor, deve ser o número passado no
 segundo parâmetro.
 */
-// 
+
 function randomFunction(arr, number) {
     if (!Array.isArray(arr)) {
         return 'The argument needs to be an Array!';
@@ -39,8 +36,9 @@ function randomFunction(arr, number) {
 };
 
 // TESTES
-// console.log(randomFunction([1, 2, 3], 0));
-// console.log(randomFunction([1, 2, 3], 3.14));
+console.log(randomFunction([1, 2, 3], 0));
+console.log(randomFunction([1, 2, 3], 3.14));
+console.log(randomFunction(sampleValues, 1));
 
 /*
 Declare uma variável que recebe um array com 5 valores, de tipos diferentes.
@@ -72,19 +70,19 @@ os livros.
 // 
 function book(bookName) {
     const bookTitle = {
-        ulysses : {
+        'Ulysses' : {
             quantidadePaginas: 300,
             autor: 'James Joyce',
             editora: 'Arqueiro'
         },
 
-        verity: {
+        'Verity': {
            quantidadePaginas: 350,
            autor: 'Coleen Hoover',
            editora: 'Record'
         },
 
-        domCasmurro: {
+        'Dom Casmurro': {
             quantidadePaginas: 208,
             autor: 'Machado de Assis',
             editora: 'Principis'
@@ -99,7 +97,7 @@ function book(bookName) {
 
 }
 
-console.log(book('domCasmurro'));
+console.log(book('Dom Casmurro'));
 
 
 /*
@@ -114,7 +112,7 @@ usando a frase:
 "O livro [NOME_DO_LIVRO] tem [X] páginas!"
 */
 // ?
-const livro = 'verity';
+const livro = 'Verity';
 console.log(`O livro ${livro} tem ${book(livro).quantidadePaginas} páginas!`);
 /*
 Ainda com a função acima, imprima o nome do autor de um livro qualquer, usando
