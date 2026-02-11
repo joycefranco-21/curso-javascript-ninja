@@ -49,7 +49,7 @@ function showTeamPosition(position) {
           return `O time que está em ${position}º lugar é o ${teams[position - 1]}.`;      
     
     default:
-      return ("Não temos a informação do time que está nessa posição.");
+      return "Não temos a informação do time que está nessa posição.";
   }
 }
 
