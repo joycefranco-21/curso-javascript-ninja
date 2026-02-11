@@ -4,7 +4,7 @@ para começar o desafio.
 Declare uma variável chamada `championship` que receberá o nome do campeonato,
 e imprima o nome desse campeonato no console.
 */
-let championship = 'Campeonato Mineiro';
+let championship = "Campeonato Mineiro";
 console.log(championship);
 
 /*
@@ -13,8 +13,14 @@ Os elementos serão nomes de times do campeonato escolhido, e os nomes devem
 estar na ordem em que eles aparecem na tabela no momento da solução desse
 desafio.
 */
-let teams = ['Atlético Mineiro', 'Cruzeiro ', 'América', 'Villa Nova', 'Tombense'];
-console.log( 'Times que estão participando do campeonato:', teams );
+let teams = [
+  "Atlético Mineiro",
+  "Cruzeiro ",
+  "América",
+  "Villa Nova",
+  "Tombense",
+];
+console.log("Times que estão participando do campeonato:", teams);
 
 /*
 Crie uma função chamada `showTeamPosition` com as seguintes características:
@@ -32,7 +38,39 @@ Crie uma função chamada `showTeamPosition` com as seguintes características:
     - Se não houver time para a posição passada, deve retornar a mensagem:
     "Não temos a informação do time que está nessa posição."
 */
-// ?
+function showTeamPosition(position) {
+  //   position += 1;
+  switch (position) {
+    case 1:
+      console.log(
+        `O time que está em ${position}º lugar é o ${teams[position - 1]}.`,
+      );
+      break;
+    case 2:
+      console.log(
+        `O time que está em ${position}º lugar é o ${teams[position - 1]}.`,
+      );
+      break;
+    case 3:
+      console.log(
+        `O time que está em ${position}º lugar é o ${teams[position - 1]}.`,
+      );
+          break;
+      case 4:
+      console.log(
+        `O time que está em ${position}º lugar é o ${teams[position - 1]}.`,
+      );
+          break;
+      case 5:
+      console.log(
+        `O time que está em ${position}º lugar é o ${teams[position - 1]}.`,
+      );
+      break;
+    default:
+      console.log("Não temos a informação do time que está nessa posição.");
+  }
+}
+
 
 /*
 Escolha 4 times do campeonato selecionado e mostre a posição dele, usando a
