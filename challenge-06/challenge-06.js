@@ -42,32 +42,14 @@ function showTeamPosition(position) {
   //   position += 1;
   switch (position) {
     case 1:
-      console.log(
-        `O time que está em ${position}º lugar é o ${teams[position - 1]}.`,
-      );
-      break;
     case 2:
-      console.log(
-        `O time que está em ${position}º lugar é o ${teams[position - 1]}.`,
-      );
-      break;
     case 3:
-      console.log(
-        `O time que está em ${position}º lugar é o ${teams[position - 1]}.`,
-      );
-      break;
     case 4:
-      console.log(
-        `O time que está em ${position}º lugar é o ${teams[position - 1]}.`,
-      );
-      break;
     case 5:
-      console.log(
-        `O time que está em ${position}º lugar é o ${teams[position - 1]}.`,
-      );
-      break;
+          return `O time que está em ${position}º lugar é o ${teams[position - 1]}.`;      
+    
     default:
-      console.log("Não temos a informação do time que está nessa posição.");
+      return ("Não temos a informação do time que está nessa posição.");
   }
 }
 
@@ -75,10 +57,10 @@ function showTeamPosition(position) {
 Escolha 4 times do campeonato selecionado e mostre a posição dele, usando a
 função acima. Entre esses 4, adicione 1 que não esteja entre os 5 primeiros.
 */
-showTeamPosition(4);
-showTeamPosition(3);
-showTeamPosition(2);
-showTeamPosition(8);
+console.log(showTeamPosition(4));
+console.log(showTeamPosition(3));
+console.log(showTeamPosition(2));
+console.log(showTeamPosition(8));
 
 /*
 Mostre os números de 20 a 30 no console (inclusive o 30), usando a estrutura de
@@ -121,6 +103,25 @@ function convertToHex(color) {
       break;
     default:
       console.log(`Não temos o equivalente hexadecimal para ${color}.`);
+  }
+}
+
+// Mesma lógica com clean code e sem switch
+const colorMap = {
+  red: "#FF0000",
+  blue: "#0000FF",
+  green: "#00FF00",
+  pink: "#FFC0CB",
+  brown: "#A52A2A",
+};
+
+function convertToHex2(color) {
+  const hex = colorMap[color];
+
+  if (hex) {
+    console.log(`O hexadecimal para a cor ${color} é ${hex}.`);
+  } else {
+    console.log(`Não temos o equivalente hexadecimal para ${color}.`);
   }
 }
 
