@@ -84,25 +84,25 @@ Crie uma função chamada `convertToHex`, com as seguintes características:
     a frase:
     "Não temos o equivalente hexadecimal para [COR]."
 */
+let colorCatalog = {
+  "red":   "#FF0000",
+  "blue":  "#0000FF",
+  "green": "#008000",
+  "pink":  "#FFC0CB",
+  "brown": "#A52A2A"
+}
+
 function convertToHex(color) {
   switch (color) {
-    case "red":
-      console.log(`O hexadecimal para a cor ${color} é #FF0000.`);
-      break;
-    case "blue":
-      console.log(`O hexadecimal para a cor ${color} é #0000FF.`);
-      break;
-    case "green":
-      console.log(`O hexadecimal para a cor ${color} é #00FF00.`);
-      break;
-    case "pink":
-      console.log(`O hexadecimal para a cor ${color} é #FFC0CB.`);
-      break;
+    case "red":        
+    case "blue":     
+    case "green":     
+    case "pink":      
     case "brown":
-      console.log(`O hexadecimal para a cor ${color} é #A52A2A.`);
-      break;
+      return`O hexadecimal para a cor ${color} é ${colorCatalog[color]}.`;
+      
     default:
-      console.log(`Não temos o equivalente hexadecimal para ${color}.`);
+      return `Não temos o equivalente hexadecimal para ${color}.`;
   }
 }
 
@@ -128,11 +128,11 @@ function convertToHex2(color) {
 /*
 Tente mostrar o hexadecimal de 8 cores diferentes usando a função criada acima.
 */
-convertToHex("black");
-convertToHex("pink");
-convertToHex("green");
-convertToHex("red");
-convertToHex("blue");
-convertToHex("brown");
-convertToHex("white");
-convertToHex("purple");
+console.log(convertToHex("black"));
+console.log(convertToHex("pink"));
+console.log(convertToHex("green"));
+console.log(convertToHex("red"));
+console.log(convertToHex("blue"));
+console.log(convertToHex("brown"));
+console.log(convertToHex("white"));
+console.log(convertToHex("purple"));
