@@ -1,24 +1,24 @@
 /*
 Crie um array com 5 items (tipos variados).
 */
-let arr = [1, 'Joyce', false, null, function () { } ]
+let arr = [1, "Joyce", false, null, function () {}];
 
 /*
 Crie uma função chamada `addItem`, que irá adicionar itens no array criado.
 A função deverá retornar o array atualizado.
 */
-function addItem(newItem) {
-    arr.push(newItem);
-    return arr;
+function addItem(array, newItem) {
+  array.push(newItem);
+  return array;
 }
 
-console.log(addItem(21));
+console.log(addItem(arr, 21));
 
 /*
 Adicione um novo array ao array criado no início do desafio, com ao menos 3
 itens de tipos diferentes, mostrando o resultado no console.
 */
-arr.push(['a', true, 2.5]);
+arr.push(["a", true, 2.5]);
 console.log(arr);
 
 /*
@@ -45,22 +45,26 @@ console.log(`O segundo array tem ${arr[6].length} itens.`);
 Utilizando a estrutura de repetição `while`, mostre no console todos os números
 pares entre 10 e 20, inclusive esses 2.
 */
-console.log('Números pares entre 10 e 20:');
-let numero = 0;
-while (numero <= 20) {
-    numero % 2 === 0 ? console.log(numero) : "";
-    numero++;
+console.log("Números pares entre 10 e 20:");
+let number = 10;
+while (number <= 20) {
+  if (number % 2 === 0) {
+    console.log(number);
+  }
+  number++;
 }
 // ?
 
 /*
 Na mesma ideia do exercício acima: mostre agora os números ímpares.
 */
-console.log( 'Números ímpares entre 10 e 20:' );
-numero = 0;
-while (numero <= 20) {
-    numero % 2 !== 0 ? console.log(numero) : "";
-    numero++;
+console.log("Números ímpares entre 10 e 20:");
+number = 10;
+while (number <= 20) {
+  if (number % 2 !== 0) {
+    console.log(number);
+  }
+  number++;
 }
 
 /*
@@ -69,15 +73,18 @@ Só vamos mudar o range:
 - No primeiro "for", mostre os números pares entre 100 e 120, inclusive eles;
 - No segundo "for", mostre os números ímpares entre 111 e 125, inclusive eles.
 */
-console.log( 'Números pares entre 100 e 120:' );
-// 
-for (numero = 100; numero <= 120; numero++){
-    numero % 2 === 0 ? console.log(numero) : "";
+console.log("Números pares entre 100 e 120:");
+//
+for (let numero = 100; numero <= 120; numero++) {
+  if (numero % 2 === 0) {
+    console.log(numero);
+  }
 }
 
-
-console.log( 'Números ímpares entre 111 e 125:' );
-// 
-for (numero = 111; numero <= 125; numero++){
-    numero % 2 !== 0 ? console.log(numero) : "";
+console.log("Números ímpares entre 111 e 125:");
+//
+for (let numero = 111; numero <= 125; numero++) {
+  if (numero % 2 !== 0) {
+    console.log(numero);
+  }
 }
