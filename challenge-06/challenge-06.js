@@ -55,13 +55,13 @@ function showTeamPosition(position) {
       console.log(
         `O time que está em ${position}º lugar é o ${teams[position - 1]}.`,
       );
-          break;
-      case 4:
+      break;
+    case 4:
       console.log(
         `O time que está em ${position}º lugar é o ${teams[position - 1]}.`,
       );
-          break;
-      case 5:
+      break;
+    case 5:
       console.log(
         `O time que está em ${position}º lugar é o ${teams[position - 1]}.`,
       );
@@ -71,18 +71,24 @@ function showTeamPosition(position) {
   }
 }
 
-
 /*
 Escolha 4 times do campeonato selecionado e mostre a posição dele, usando a
 função acima. Entre esses 4, adicione 1 que não esteja entre os 5 primeiros.
 */
-// ?
+showTeamPosition(4);
+showTeamPosition(3);
+showTeamPosition(2);
+showTeamPosition(8);
 
 /*
 Mostre os números de 20 a 30 no console (inclusive o 30), usando a estrutura de
 repetição "while".
 */
-// ?
+let number = 20;
+while (number <= 30) {
+  console.log(number);
+  number++;
+}
 
 /*
 Crie uma função chamada `convertToHex`, com as seguintes características:
@@ -96,9 +102,36 @@ Crie uma função chamada `convertToHex`, com as seguintes características:
     a frase:
     "Não temos o equivalente hexadecimal para [COR]."
 */
-// ?
+function convertToHex(color) {
+  switch (color) {
+    case "red":
+      console.log(`O hexadecimal para a cor ${color} é #FF0000.`);
+      break;
+    case "blue":
+      console.log(`O hexadecimal para a cor ${color} é #0000FF.`);
+      break;
+    case "green":
+      console.log(`O hexadecimal para a cor ${color} é #00FF00.`);
+      break;
+    case "pink":
+      console.log(`O hexadecimal para a cor ${color} é #FFC0CB.`);
+      break;
+    case "brown":
+      console.log(`O hexadecimal para a cor ${color} é #A52A2A.`);
+      break;
+    default:
+      console.log(`Não temos o equivalente hexadecimal para ${color}.`);
+  }
+}
 
 /*
 Tente mostrar o hexadecimal de 8 cores diferentes usando a função criada acima.
 */
-// ?
+convertToHex("black");
+convertToHex("pink");
+convertToHex("green");
+convertToHex("red");
+convertToHex("blue");
+convertToHex("brown");
+convertToHex("white");
+convertToHex("purple");
