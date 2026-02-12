@@ -60,7 +60,7 @@ Na mesma ideia do exercício acima: mostre agora os números ímpares.
 */
 console.log("Números ímpares entre 10 e 20:");
 number = 10;
-while (number <= 20) {
+while (number < 20) {
   if (number % 2 !== 0) {
     console.log(number);
   }
