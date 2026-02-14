@@ -3,9 +3,9 @@ Declare uma variável chamada `sum` e atribua a ela uma função chamada
 `calculateSum`. A função deve receber dois parâmetros e retornar a soma
 desses parâmetros.
 */
-let sum = function calculateSum(x, y) { 
+let sum = function calculateSum(x, y) {
   return x + y;
-}
+};
 
 /*
 Invoque a função criada acima, passando dois números que serão somados, e mostre
@@ -15,21 +15,22 @@ o resultado no console, com a frase:
 
 let number1 = 2;
 let number2 = 3;
-console.log(`A soma de ${number1} e ${number2} é igual a ${sum(number1, number2)}.`);
-
+console.log(
+  `A soma de ${number1} e ${number2} é igual a ${sum(number1, number2)}.`,
+);
 
 /*
 Mostre no console o nome da função criada acima, com a frase:
 "O nome da função que faz a soma é [NOME DA FUNÇÃO]."
 */
-console.log(`O nome da função que faz a soma é ${sum.name}.`)
+console.log(`O nome da função que faz a soma é ${sum.name}.`);
 
 /*
 Crie uma função literal chamada `showName`. Essa função deve retornar o
 seu nome.
 */
 function showName() {
-  return 'Joyce';
+  return "Joyce";
 }
 
 /*
@@ -56,18 +57,38 @@ vai efetuar. Será uma string com os valores `+`, `-`, `*`, `/` ou `%`;
   - Se o operador não for válido, retornar a frase:
   "Operação inválida."
 */
-// ?
+function calculator(operator) {
+  return function (a, b) {
+    let operationDictionary = {
+      "+": a + b,
+      "-": a - b,
+      "*": a * b,
+      "/": a / b,
+      "%": a % b,
+    };
+    switch (operator) {
+      case "+":
+      case "-":
+      case "*":
+      case "/":
+      case "%":
+        return `Resultado da operação: ${a} ${operator} ${b} = ${operationDictionary[operator]}.`;
+      default:
+        return "Operação inválida.";
+    }
+  };
+}
 
 /*
 Declare uma variável chamada `sum`, que receberá a função acima, passando como
 parâmetro o operador de soma.
 */
-// ?
+let sum2 = calculator(".");
 
 /*
 Agora `sum` é uma função. Mostre no console a soma de dois números, usando ela.
 */
-// ?
+console.log(sum2(15, 6));
 
 /*
 Agora, declare algumas variáveis com os nomes `subtraction`, `multiplication`,
