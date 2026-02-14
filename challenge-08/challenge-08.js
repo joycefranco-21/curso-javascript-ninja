@@ -57,7 +57,7 @@ vai efetuar. Será uma string com os valores `+`, `-`, `*`, `/` ou `%`;
   - Se o operador não for válido, retornar a frase:
   "Operação inválida."
 */
-function calculator(operator) {
+let calculator1 = function (operator) {
   return function (a, b) {
     let operationDictionary = {
       "+": a + b,
@@ -77,13 +77,36 @@ function calculator(operator) {
         return "Operação inválida.";
     }
   };
-}
+};
+
+// RESOLVENDO COM IF
+let calculator = function (operator) {
+  return function (a, b) {
+    let operationDictionary = {
+      "+": a + b,
+      "-": a - b,
+      "*": a * b,
+      "/": a / b,
+      "%": a % b,
+    };
+    if (
+      operator === "+" ||
+      operator === "-" ||
+      operator === "*" ||
+      operator === "/" ||
+      operator === "%"
+    ) {
+      return `Resultado da operação: ${a} ${operator} ${b} = ${operationDictionary[operator]}.`;
+    }
+    return "Operação inválida.";
+  };
+};
 
 /*
 Declare uma variável chamada `sum`, que receberá a função acima, passando como
 parâmetro o operador de soma.
 */
-let sum2 = calculator(".");
+let sum2 = calculator("+");
 
 /*
 Agora `sum` é uma função. Mostre no console a soma de dois números, usando ela.
