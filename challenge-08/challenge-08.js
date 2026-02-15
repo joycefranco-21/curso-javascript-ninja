@@ -83,11 +83,11 @@ let calculator1 = function (operator) {
 let calculator = function (operator) {
   return function (a, b) {
     let operationDictionary = {
-      "+": a + b,
-      "-": a - b,
-      "*": a * b,
-      "/": a / b,
-      "%": a % b,
+      "+": function () {return a + b},
+      "-": function () {return a - b},
+      "*": function () {return a * b},
+      "/": function () {return a / b},
+      "%": function () {return a % b},
     };
     if (
       operator === "+" ||
@@ -95,8 +95,8 @@ let calculator = function (operator) {
       operator === "*" ||
       operator === "/" ||
       operator === "%"
-    ) {
-      return `Resultado da operação: ${a} ${operator} ${b} = ${operationDictionary[operator]}.`;
+    ) {      
+      return `Resultado da operação: ${a} ${operator} ${b} = ${operationDictionary[operator]()}.`;
     }
     return "Operação inválida.";
   };
@@ -106,22 +106,28 @@ let calculator = function (operator) {
 Declare uma variável chamada `sum`, que receberá a função acima, passando como
 parâmetro o operador de soma.
 */
-let sum2 = calculator("+");
+let sum2 = calculator('+');
 
 /*
 Agora `sum` é uma função. Mostre no console a soma de dois números, usando ela.
 */
-console.log(sum2(15, 6));
+console.log(sum2(3, 7));
 
 /*
 Agora, declare algumas variáveis com os nomes `subtraction`, `multiplication`,
 `division` e `mod`, e atribua a elas a função `calculator`, passando o operador
 correto por parâmetro para cada uma delas.
 */
-// ?
-
+let subtraction = calculator('-');
+let multiplication = calculator('*');
+let division = calculator('/');
+let mod = calculator('%');
 /*
 Faça uma operação com cada uma das funções criadas acima, mostrando o resultado
 no console.
 */
 // ?
+console.log(subtraction(30, 5));
+console.log(multiplication(3, 7));
+console.log(division(15,3));
+console.log(mod(3, 2));
