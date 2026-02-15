@@ -122,6 +122,8 @@ let subtraction = calculator('-');
 let multiplication = calculator('*');
 let division = calculator('/');
 let mod = calculator('%');
+let test = calculator('x');
+
 /*
 Faça uma operação com cada uma das funções criadas acima, mostrando o resultado
 no console.
@@ -131,3 +133,4 @@ console.log(subtraction(30, 5));
 console.log(multiplication(3, 7));
 console.log(division(15,3));
 console.log(mod(3, 2));
+console.log(test(1, 2));
