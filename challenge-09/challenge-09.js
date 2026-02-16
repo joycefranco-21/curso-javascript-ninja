@@ -27,9 +27,11 @@ correto da variável ou função chamada.
   function myFunction2() {
     var number1 = 10;
     var number2 = 20;
+
     var sum = function sum() {
       return number1 + number2;
     };
+
     console.log("A soma de 10 e 20 é igual a", sum ? sum() : undefined);
     return sum();
   }
@@ -41,8 +43,10 @@ correto da variável ou função chamada.
   function myFunction3() {
     var number2 = 50;
     var number1 = 40;
+
     console.log("Na função myFunction3, number1 é igual a", number1);
     console.log("A soma de 40 e 50 é igual a", sum());
+
     function sum() {
       return number1 + number2;
     }
