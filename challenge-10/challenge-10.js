@@ -29,11 +29,21 @@ função receberá dois parâmetros e retornará a operação referente à sua
 propriedade, usando os valores passados por parâmetro.
 */
   let operation = {
-    "+": function () {},
-    "-": function () {},
-    "*": function () {},
-    "/": function () {},
-    "%": function () {},
+    "+": function (a, b) {
+      return a + b;
+    },
+    "-": function (a, b) {
+      return a - b;
+    },
+    "*": function (a, b) {
+      return a * b;
+    },
+    "/": function (a, b) {
+      return a / b;
+    },
+    "%": function (a, b) {
+      return a % b;
+    },
   };
 
   /*
@@ -46,7 +56,9 @@ parâmetro a ela é válido, ou seja, se ele é igual a '+', '-', '*', '/' ou
 Caso contrário, "false".
 - O desafio é fazer o retorno sem usar "if" ou "switch".
 */
-  // ?
+  function isOperatorValid(operator) {
+    return !!operation[operator];
+  }
 
   /*
 Agora vamos criar a calculadora.
