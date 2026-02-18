@@ -57,7 +57,7 @@ Caso contrário, "false".
 - O desafio é fazer o retorno sem usar "if" ou "switch".
 */
   function isOperatorValid(operator) {
-    return !!operation[operator];
+    return operation[operator] !== undefined;
   }
 
   /*
