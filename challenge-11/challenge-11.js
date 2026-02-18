@@ -69,7 +69,7 @@ Mostre no console os números no array.
 
   let numbers = [];
 
-  for (let i = 0; i <= 20; i++) {
+  for (let i = 0; i < 20; i++) {
     if (i > 10) {
       break;
     }
@@ -88,7 +88,7 @@ Mostrar no console os números do array.
   numbers = [];
 
   for (let i = 0; i <= 20; i++) {
-    if (i % 2 !== 0) {
+    if (i % 2 === 0) {
       continue;
     }
     numbers.push(i);
