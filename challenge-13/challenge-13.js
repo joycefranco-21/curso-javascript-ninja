@@ -64,7 +64,17 @@ Mostre no console todos os estados que estão em `brasil`.
 /*
 Crie um novo array chamado `nordeste`, que tenha os estados do nordeste.
 */
-    const nordeste = ['Maranhão', 'Piauí', 'Ceará', 'Rio Grande do Norte', 'Paraíba', 'Pernambuco', 'Alagoas', 'Sergipe', 'Bahia'];
+    const nordeste = [
+      "Maranhão",
+      "Piauí",
+      "Ceará",
+      "Rio Grande do Norte",
+      "Paraíba",
+      "Pernambuco",
+      "Alagoas",
+      "Sergipe",
+      "Bahia",
+    ];
 
 /*
 Mostre no console os estados do nordeste.
@@ -80,13 +90,12 @@ chamada `newSudeste`.
 Adicione os estados do `nordeste` ao array `brasil`. Esses estados devem
 ficar no mesmo nível que os estados já existentes, não em um array separado.
 */    
-    brasil = brasil.concat(nordeste);        
+    brasil = brasil.concat(nordeste);
 /*
 Mostre no console os estados em `newSudeste`.
 */
     console.log('\nEstados em newSudeste:');
     console.log(newSudeste);
-
 /*
 Mostre no console os estados do `brasil`.
 */
@@ -102,7 +111,10 @@ propriedades:
     let newBrasil = [];
 
     brasil.forEach(function (estado, index) {
-      newBrasil.push({ id: index, estado: estado });
+      newBrasil.push({
+        id: index,
+        estado: estado,
+      });
     });
 
 /*
@@ -110,8 +122,6 @@ Mostre o array `newBrasil` no console
 */
     console.log('\nnewBrasil:');
     console.log(newBrasil);
-
-
 /*
 Percorra o array `brasil` e verifique se os estados tem mais de 7 letras cada,
 atribuindo o resultado à uma variável. Se tiver, mostre no console a frase:
