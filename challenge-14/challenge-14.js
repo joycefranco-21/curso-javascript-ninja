@@ -12,18 +12,11 @@
     */
   console.log("Number Objects Array:");
 
-  let numberObjects = [
-    { number: 1 },
-    { number: 2 },
-    { number: 3 },
-    { number: 4 },
-    { number: 5 },
-    { number: 6 },
-    { number: 7 },
-    { number: 8 },
-    { number: 9 },
-    { number: 10 },
-  ];
+    let numberObjects = [];
+
+    for (let i = 1; i <= 10; i++) {
+      numberObjects.push({ number: i });
+    }
 
   console.log(numberObjects);
 
@@ -153,9 +146,8 @@
     */
   console.log(
     "\njustMod2Or3 é um array? Se for, a representação dele em String é:",
-    );
-    if (Array.isArray(justMod2Or3)) {
-        console.log(justMod2Or3.toString());
-    }
-    
+  );
+  if (Array.isArray(justMod2Or3)) {
+    console.log(justMod2Or3.toString());
+  }
 })()
