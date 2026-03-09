@@ -12,11 +12,11 @@
     */
   console.log("Number Objects Array:");
 
-    let numberObjects = [];
+  let numberObjects = [];
 
-    for (let i = 1; i <= 10; i++) {
-      numberObjects.push({ number: i });
-    }
+  for (let i = 1; i <= 10; i++) {
+    numberObjects.push({ number: i });
+  }
 
   console.log(numberObjects);
 
@@ -26,9 +26,8 @@
     */
   console.log("\nJust Numbers:");
 
-  let justNumbers = [];
-  numberObjects.forEach(function (valor) {
-    justNumbers.push(valor.number); //a função forEach já percorre os valores do array, posso assim acessar os valores de forma direta : valor.propriedade
+  const justNumbers = numberObjects.map(function (items) {
+    return items.number;
   });
 
   console.log(justNumbers);
@@ -121,7 +120,7 @@
 
   console.log("\nExiste um { number: 2 } em numberObjects?");
 
-  if (numberObjects.indexOf(numberObjects.number === 2) !== -1) {
+  if (numberObjects.indexOf({ number: 2 }) > -1) {
     console.log(`Existe um objeto { number: 2 } em numberObjects!`);
   } else {
     console.log(`Não existe um objeto { number: 2 } em numberObjects :(`);
@@ -134,7 +133,7 @@
   console.log(
     "\nE buscando a partir do último índice, o { number: 2 } existe?",
   );
-  if (numberObjects.lastIndexOf(numberObjects.number === 2) !== -1) {
+  if (numberObjects.lastIndexOf({ number: 2 }, 2) > -1) {
     console.log(`Existe um objeto { number: 2 } em numberObjects!`);
   } else {
     console.log(`Não existe um objeto { number: 2 } em numberObjects :(`);
@@ -150,4 +149,4 @@
   if (Array.isArray(justMod2Or3)) {
     console.log(justMod2Or3.toString());
   }
-})()
+})();
