@@ -84,14 +84,9 @@ cada um. A frase deverá ser no formato:
 */
   console.log('\nNova idade das pessoas:');
   //REfazer esse último método pois eu não entendi o que era para ter sido feito.
-  joyce.addAge(1);
-  joyce.addAge(3);
-  console.log(`${joyce.getFullName()} agora tem ${joyce.getAge()} anos.`);
-  roberto.addAge(5);
-  roberto.addAge(3);
-  console.log(`${roberto.getFullName()} agora tem ${roberto.getAge()} anos.`);
-  fatima.addAge(1);
-  fatima.addAge(2);
-  console.log(`${fatima.getFullName()} agora tem ${fatima.getAge()} anos.`);
+  
+  console.log(`${joyce.getFullName()} agora tem ${joyce.addAge(2).getAge()} anos.`);
+  console.log(`${roberto.getFullName()} agora tem ${roberto.addAge(2).getAge()} anos.`);
+  console.log(`${fatima.getFullName()} agora tem ${fatima.addAge(2).getAge()} anos.`);
   
 })()
