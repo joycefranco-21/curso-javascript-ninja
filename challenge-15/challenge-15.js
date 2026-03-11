@@ -1,3 +1,4 @@
+(function(){
 /*
 Envolva todo o código desse desafio em uma IIFE.
 Crie um arquivo chamado index.html e adicione esse script ao HTML.
@@ -21,7 +22,25 @@ as seguintes características:
   adicionados à idade original (age). Esse método deverá retornar o objeto
   que será instanciado.
 */
-// ?
+  function Person(name, lastName, age) {
+    this.name = name;
+    this.lastName = lastName;
+    this.age = age;
+
+    this.getFullName = function () {
+      return `${this.name} ${this.lastName}`;
+    }
+
+    this.getAge = function () {
+      return this.age;
+    }
+
+    this.addAge = function () {
+      this.age += arguments[0];
+      return this;
+    }
+  
+}
 
 /*
 Crie 3 novos objetos usando o construtor acima. Os objetos serão novas
@@ -29,26 +48,50 @@ pessoas. As variáveis deverão ser o primeiro nome da pessoa. Passe os
 parâmetros corretamente para o construtor para criar as novas pessoas.
 Mostre as 3 novas pessoas criadas no console (Um console.log por pessoa).
 */
-console.log( 'Novas pessoas criadas à partir de Person:' );
-// ?
+  console.log('Novas pessoas criadas à partir de Person:');
+  const joyce = new Person('Joyce', 'Franco', 29);
+  const roberto = new Person('Roberto', 'Freire', 33);
+  const fatima = new Person('Fátima', 'Luzia', 55);
 
+  console.log(joyce);
+  console.log(roberto);
+  console.log(fatima);
 /*
 Mostre no console o nome completo de cada pessoa.
 */
-console.log( '\nNomes das pessoas:' );
-// ?
+  console.log('\nNomes das pessoas:');
+
+  console.log(joyce.getFullName());
+  console.log(roberto.getFullName());
+  console.log(fatima.getFullName());
+
 
 /*
 Mostre no console as idades de cada pessoa, com a frase:
 - "[NOME COMPLETO] tem [IDADE] anos."
 */
-console.log( '\nIdade das pessoas:' );
-// ?
+  console.log('\nIdade das pessoas:');
+
+  console.log(`${joyce.getFullName()} tem ${joyce.getAge()} anos.`);
+  console.log(`${roberto.getFullName()} tem ${roberto.getAge()} anos.`);
+  console.log(`${fatima.getFullName()} tem ${fatima.getAge()} anos.`);
+
 
 /*
 Adicione alguns anos à cada pessoa, e mostre no console a nova idade de
 cada um. A frase deverá ser no formato:
 - "[NOME COMPLETO] agora tem [NOVA IDADE] anos."
 */
-console.log( '\nNova idade das pessoas:' );
-// ?
+  console.log('\nNova idade das pessoas:');
+  //REfazer esse último método pois eu não entendi o que era para ter sido feito.
+  joyce.addAge(1);
+  joyce.addAge(3);
+  console.log(`${joyce.getFullName()} agora tem ${joyce.age} anos.`);
+  roberto.addAge(5);
+  roberto.addAge(3);
+  console.log(`${roberto.getFullName()} agora tem ${roberto.age} anos.`);
+  fatima.addAge(1);
+  fatima.addAge(2);
+  console.log(`${fatima.getFullName()} agora tem ${fatima.age} anos.`);
+  
+})()
